@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "cdk-pipeline-example"
+version = "0.1.0"
+description = "Example CDK Pipeline deploying a function url"
+authors = ["Michael Brewer"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "software/src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aws-lambda-powertools = {extras = ["tracer"], version = "^2.4.0"}
+
+[tool.poetry.group.test.dependencies]
+pytest = "^6.0.0"
+pytest-mock = "*"
+
+[tool.poetry.group.cdk.dependencies]
+aws-cdk-lib = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
