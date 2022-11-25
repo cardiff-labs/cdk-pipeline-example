@@ -18,6 +18,10 @@ pytest-mock = "*"
 [tool.poetry.group.cdk.dependencies]
 aws-cdk-lib = "*"
 
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+isort = "^5.10.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
