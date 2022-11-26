@@ -22,7 +22,7 @@ tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy 
 
 [[package]]
 name = "aws-cdk-asset-awscli-v1"
-version = "2.2.18"
+version = "2.2.19"
 description = "A library that contains the AWS CLI for use in Lambda Layers"
 category = "dev"
 optional = false
@@ -48,7 +48,7 @@ typeguard = ">=2.13.3,<2.14.0"
 
 [[package]]
 name = "aws-cdk-asset-node-proxy-agent-v5"
-version = "2.0.24"
+version = "2.0.25"
 description = "@aws-cdk/asset-node-proxy-agent-v5"
 category = "dev"
 optional = false
@@ -178,7 +178,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7
 
 [[package]]
 name = "constructs"
-version = "10.1.170"
+version = "10.1.171"
 description = "A programming model for software-defined state"
 category = "dev"
 optional = false
@@ -449,16 +449,16 @@ attrs = [
     {file = "attrs-22.1.0.tar.gz", hash = "sha256:29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"},
 ]
 aws-cdk-asset-awscli-v1 = [
-    {file = "aws-cdk.asset-awscli-v1-2.2.18.tar.gz", hash = "sha256:57e65e2d9059a06cd9b9763547cbea873e4fc7661f377e7c3271c5201cb423e4"},
-    {file = "aws_cdk.asset_awscli_v1-2.2.18-py3-none-any.whl", hash = "sha256:2c62a4ccf98d81f346c0969210917bf601e224679c79e4bfe4fd3017b60ebe02"},
+    {file = "aws-cdk.asset-awscli-v1-2.2.19.tar.gz", hash = "sha256:2c9bd5b16fd9acc6e96b50a6d19ab4f81c77babc07dcc6dfdd9c3ff6e3065891"},
+    {file = "aws_cdk.asset_awscli_v1-2.2.19-py3-none-any.whl", hash = "sha256:834071978331822f0f17e28ad5d2cdb8fd8aa9677de2e4ff1baeb9e5cd9905b4"},
 ]
 aws-cdk-asset-kubectl-v20 = [
     {file = "aws-cdk.asset-kubectl-v20-2.1.1.tar.gz", hash = "sha256:9834cdb150c5590aea4e5eba6de2a89b4c60617451181c524810c5a75154565c"},
     {file = "aws_cdk.asset_kubectl_v20-2.1.1-py3-none-any.whl", hash = "sha256:a2fad1a5a35a94a465efe60859f91e45dacc33261fb9bbf1cf9bbc6e2f70e9d6"},
 ]
 aws-cdk-asset-node-proxy-agent-v5 = [
-    {file = "aws-cdk.asset-node-proxy-agent-v5-2.0.24.tar.gz", hash = "sha256:5fbda2b9f1a73e23c4a8d128641549cba9789ca02131328ce201379efb419c74"},
-    {file = "aws_cdk.asset_node_proxy_agent_v5-2.0.24-py3-none-any.whl", hash = "sha256:87f109e752de1a99642369ebc4bf873c563fa0bd1eff2ab24fc918163297738c"},
+    {file = "aws-cdk.asset-node-proxy-agent-v5-2.0.25.tar.gz", hash = "sha256:315e937e4dad1037e5414a85b07643da2642abe4121ef052860d812c9ccd5c56"},
+    {file = "aws_cdk.asset_node_proxy_agent_v5-2.0.25-py3-none-any.whl", hash = "sha256:47e9fff43aa9370e754d12d5044a03087564409b5f6ddb5f79acf6d43296f4dc"},
 ]
 aws-cdk-lib = [
     {file = "aws-cdk-lib-2.51.1.tar.gz", hash = "sha256:35b66c2ed34490470d1917ee61011fbe053ad22cd1521ee34128f2db78bd2a8a"},
@@ -512,8 +512,8 @@ colorama = [
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
 constructs = [
-    {file = "constructs-10.1.170-py3-none-any.whl", hash = "sha256:d98750dfb656bf5563d5a0c548738975c4a25c470d6bc69a48bfda2e6bbefff5"},
-    {file = "constructs-10.1.170.tar.gz", hash = "sha256:4f9e0b200201ca17a01a8c1d57279d1b17699095dc5d0ab4d06d6f218cbdfb2c"},
+    {file = "constructs-10.1.171-py3-none-any.whl", hash = "sha256:6a0a793499577a413cee9ef7dfede59ab4718202149f83db669d6e56c759f039"},
+    {file = "constructs-10.1.171.tar.gz", hash = "sha256:82505daf827340a4213e8e365cc112b94422a0a89dc429131d18d7b7559c7c50"},
 ]
 exceptiongroup = [
     {file = "exceptiongroup-1.0.4-py3-none-any.whl", hash = "sha256:542adf9dea4055530d6e1279602fa5cb11dab2395fa650b8674eaec35fc4a828"},
