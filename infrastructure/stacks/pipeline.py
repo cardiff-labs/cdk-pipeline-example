@@ -46,7 +46,7 @@ class MyPipelineStack(Stack):
                     "main",
                     connection_arn="arn:aws:codestar-connections:us-west-1:254688924456:connection/2261a500-932d-4a6f-93cc-b3064d536d52",
                 ),
-                commands=["make dev", "npm i -g aws-cdk", "cd infrastructure", "cdk synth"],
+                commands=["make dev", "npm i -g aws-cdk", "cdk synth"],
             ),
         )
 
