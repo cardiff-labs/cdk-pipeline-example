@@ -1,6 +1,6 @@
 import aws_cdk as cdk
 
-from stacks.pipeline import MyPipelineStack
+from infrastructure.stacks.pipeline import MyPipelineStack
 
 app = cdk.App()
 stack = MyPipelineStack(app, "pipeline")
