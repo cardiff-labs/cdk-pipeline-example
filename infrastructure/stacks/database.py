@@ -7,5 +7,5 @@ class DatabaseStack(cdk.Stack):
         super().__init__(scope, id)
 
         self.table = aws_dynamodb.Table(
-            self, "Table", partition_key=aws_dynamodb.Attribute(name="id", type=aws_dynamodb.AttributeType.STRING)
+            self, "DemoTable", partition_key=aws_dynamodb.Attribute(name="id", type=aws_dynamodb.AttributeType.STRING)
         )

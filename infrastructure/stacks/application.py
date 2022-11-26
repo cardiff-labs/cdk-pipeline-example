@@ -8,4 +8,4 @@ class ExampleApplication(Stage):
         super().__init__(scope, id, env=env, outdir=outdir)
 
         DatabaseStack(self, "Database")
-        # Create lambda and use table name as argument
+        # TODO: also create a lambda and use table name as argument

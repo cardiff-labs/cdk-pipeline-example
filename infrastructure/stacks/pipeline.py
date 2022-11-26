@@ -32,19 +32,18 @@ class MyPipelineStack(Stack):
             cross_region_references=cross_region_references,
         )
 
-        # Create a code commit repo and load in source
-
         # Reference repo from CodePipeline
+        # Use an existing connection created using the AWS console to authenticate to GitHub
+        connection_arn = "arn:aws:codestar-connections:us-west-1:254688924456:connection/2261a500-932d-4a6f-93cc-b3064d536d52"
         pipeline = pipelines.CodePipeline(
             self,
-            "Pipeline",
+            "CDKDemoPipeline",
             synth=pipelines.ShellStep(
-                "Synth",
-                # Use a connection created using the AWS console to authenticate to GitHub
+                "SynthStack",
                 input=pipelines.CodePipelineSource.connection(
                     "cardiff-labs/cdk-pipeline-example",
                     "main",
-                    connection_arn="arn:aws:codestar-connections:us-west-1:254688924456:connection/2261a500-932d-4a6f-93cc-b3064d536d52",
+                    connection_arn=connection_arn,
                 ),
                 commands=["make dev", "npm i -g aws-cdk", "cdk synth"],
             ),
