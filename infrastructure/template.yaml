@@ -121,7 +121,7 @@ Resources:
                   - PipelineCodeBuildActionRole226DB0CB
                   - Arn
               - Fn::GetAtt:
-                  - PipelineSourcemyorgmyappCodePipelineActionRole3503231A
+                  - PipelineSourcecardifflabscdkpipelineexampleCodePipelineActionRoleD5F8A100
                   - Arn
               - Fn::Join:
                   - ""
@@ -154,15 +154,15 @@ Resources:
                 Provider: CodeStarSourceConnection
                 Version: "1"
               Configuration:
-                ConnectionArn: arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41
-                FullRepositoryId: my-org/my-app
+                ConnectionArn: arn:aws:codestar-connections:us-west-1:254688924456:connection/2261a500-932d-4a6f-93cc-b3064d536d52
+                FullRepositoryId: cardiff-labs/cdk-pipeline-example
                 BranchName: main
-              Name: my-org_my-app
+              Name: cardiff-labs_cdk-pipeline-example
               OutputArtifacts:
-                - Name: my_org_my_app_Source
+                - Name: cardiff_labs_cdk_pipeline_example_Source
               RoleArn:
                 Fn::GetAtt:
-                  - PipelineSourcemyorgmyappCodePipelineActionRole3503231A
+                  - PipelineSourcecardifflabscdkpipelineexampleCodePipelineActionRoleD5F8A100
                   - Arn
               RunOrder: 1
           Name: Source
@@ -175,9 +175,9 @@ Resources:
               Configuration:
                 ProjectName:
                   Ref: PipelineBuildSynthCdkBuildProject6BEFA8E6
-                EnvironmentVariables: '[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"00ebacfb32b1bde8d3638577308e7b7144dfa3b0a58a83bc6ff38a3b1f26951c"}]'
+                EnvironmentVariables: '[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"257998ab2b225635b439972d71e165664b69104f89a391d4aec65ef86696ed7c"}]'
               InputArtifacts:
-                - Name: my_org_my_app_Source
+                - Name: cardiff_labs_cdk_pipeline_example_Source
               Name: Synth
               OutputArtifacts:
                 - Name: Synth_Output
@@ -280,7 +280,7 @@ Resources:
       - PipelineRoleB27FAA37
     Metadata:
       aws:cdk:path: pipeline/Pipeline/Pipeline/Resource
-  PipelineSourcemyorgmyappCodePipelineActionRole3503231A:
+  PipelineSourcecardifflabscdkpipelineexampleCodePipelineActionRoleD5F8A100:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
@@ -301,15 +301,15 @@ Resources:
         - Key: project
           Value: cdk-pipeline-example
     Metadata:
-      aws:cdk:path: pipeline/Pipeline/Pipeline/Source/my-org_my-app/CodePipelineActionRole/Resource
-  PipelineSourcemyorgmyappCodePipelineActionRoleDefaultPolicy709A7570:
+      aws:cdk:path: pipeline/Pipeline/Pipeline/Source/cardiff-labs_cdk-pipeline-example/CodePipelineActionRole/Resource
+  PipelineSourcecardifflabscdkpipelineexampleCodePipelineActionRoleDefaultPolicy5944FBD3:
     Type: AWS::IAM::Policy
     Properties:
       PolicyDocument:
         Statement:
           - Action: codestar-connections:UseConnection
             Effect: Allow
-            Resource: arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41
+            Resource: arn:aws:codestar-connections:us-west-1:254688924456:connection/2261a500-932d-4a6f-93cc-b3064d536d52
           - Action:
               - s3:Abort*
               - s3:DeleteObject*
@@ -344,11 +344,11 @@ Resources:
                       - Arn
                   - /*
         Version: "2012-10-17"
-      PolicyName: PipelineSourcemyorgmyappCodePipelineActionRoleDefaultPolicy709A7570
+      PolicyName: PipelineSourcecardifflabscdkpipelineexampleCodePipelineActionRoleDefaultPolicy5944FBD3
       Roles:
-        - Ref: PipelineSourcemyorgmyappCodePipelineActionRole3503231A
+        - Ref: PipelineSourcecardifflabscdkpipelineexampleCodePipelineActionRoleD5F8A100
     Metadata:
-      aws:cdk:path: pipeline/Pipeline/Pipeline/Source/my-org_my-app/CodePipelineActionRole/DefaultPolicy/Resource
+      aws:cdk:path: pipeline/Pipeline/Pipeline/Source/cardiff-labs_cdk-pipeline-example/CodePipelineActionRole/DefaultPolicy/Resource
   PipelineBuildSynthCdkBuildProjectRole231EEA2A:
     Type: AWS::IAM::Role
     Properties:
@@ -465,9 +465,10 @@ Resources:
             "phases": {
               "build": {
                 "commands": [
-                  "npm ci",
-                  "npm run build",
-                  "npx cdk synth"
+                  "make dev",
+                  "npm i -g aws-cdk",
+                  "cd infrastructure",
+                  "cdk synth"
                 ]
               }
             },

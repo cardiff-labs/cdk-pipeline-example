@@ -42,11 +42,11 @@ class MyPipelineStack(Stack):
                 "Synth",
                 # Use a connection created using the AWS console to authenticate to GitHub
                 input=pipelines.CodePipelineSource.connection(
-                    "my-org/my-app",
+                    "cardiff-labs/cdk-pipeline-example",
                     "main",
-                    connection_arn="arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41",
+                    connection_arn="arn:aws:codestar-connections:us-west-1:254688924456:connection/2261a500-932d-4a6f-93cc-b3064d536d52",
                 ),
-                commands=["npm ci", "npm run build", "npx cdk synth"],
+                commands=["make dev", "npm i -g aws-cdk", "cd infrastructure", "cdk synth"],
             ),
         )
 
